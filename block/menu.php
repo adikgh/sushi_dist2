@@ -9,7 +9,7 @@
 				<i class="far fa-walking"></i>
 				<span>Собой</span>
 			</a>
-			<a class="pmenu_i <?=($menu_name=='user'?'pmenu_i_act':'')?>" href="/orders/?sort=coffee">
+			<a class="pmenu_i <?=($menu_name=='coffee'?'pmenu_i_act':'')?>" href="/orders/?sort=coffee">
 				<i class="far fa-store"></i>
 				<span>Кофе</span>
 			</a>

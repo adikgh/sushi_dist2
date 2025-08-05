@@ -50,7 +50,7 @@
 		$menu_name = 'user';
 		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1 and company_id = '$company' and `order_type` = 2 and `order_status` = 4 order by number desc");
 	} elseif ($sort == 'coffee') {
-		$menu_name = 'user';
+		$menu_name = 'coffee';
 		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1 and company_id = '$company' and `order_type` = 4 and `order_status` = 4 order by number desc");
 	} else {
 		$menu_name = 'none';
@@ -202,6 +202,10 @@
 													<a class="btn btn_cl" href="https://2gis.kz/shymkent/search/<?=$buy_d['address']?>" target="_blank">Картадан ашу</a>
 												</div>
 											<? endif ?>
+											<div class="uc_uil2_mi">
+												<div class="uc_uil2_mi1">Оператор:</div>
+												<div class="uc_uil2_mi2"><?=(fun::user($buy_d['user_id']))['name']?></div>
+											</div>
 										</div>
 									<? endif ?>
 
