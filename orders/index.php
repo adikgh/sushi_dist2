@@ -194,6 +194,10 @@
 									<? if ($buy_d['address']): ?>
 										<div class="uc_uil2_raz">
 											<div class="uc_uil2_mi">
+												<div class="uc_uil2_mi1">Оператор:</div>
+												<div class="uc_uil2_mi2"><?=(fun::user($buy_d['user_id']))['name']?></div>
+											</div>
+											<div class="uc_uil2_mi">
 												<div class="uc_uil2_mi1">Адрес:</div>
 												<div class="uc_uil2_mi2"><?=$buy_d['address']?></div>
 											</div>
@@ -202,10 +206,6 @@
 													<a class="btn btn_cl" href="https://2gis.kz/shymkent/search/<?=$buy_d['address']?>" target="_blank">Картадан ашу</a>
 												</div>
 											<? endif ?>
-											<div class="uc_uil2_mi">
-												<div class="uc_uil2_mi1">Оператор:</div>
-												<div class="uc_uil2_mi2"><?=(fun::user($buy_d['user_id']))['name']?></div>
-											</div>
 										</div>
 									<? endif ?>
 
