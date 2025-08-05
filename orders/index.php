@@ -51,7 +51,7 @@
 		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1 and company_id = '$company' and `order_type` = 2 and `order_status` = 4 order by number desc");
 	} elseif ($sort == 'coffee') {
 		$menu_name = 'coffee';
-		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1 and company_id = '$company' and `order_type` = 4 and `order_status` = 4 order by number desc");
+		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1 and company_id = '$company' and `order_type` = 4 order by number desc");
 	} else {
 		$menu_name = 'none';
 		$orders = db::query("select * from retail_orders where ins_dt BETWEEN '$start_cdate' and '$end_cdate' and `paid` = 1  and company_id = '$company' and `order_status` in(5, 6) order by number desc");
